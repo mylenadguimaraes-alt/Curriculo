@@ -59,10 +59,27 @@ body {
     padding: 20px;
     text-align: initial;
     display: grid;
-    grid-column-gap: 5px;
+    column-gap: 5px;
+    row-gap: 5px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 
+}
+
+.curriculo_corpo .curriculo_informacoes {
+    position: relative;
+}
+
+.curriculo_corpo .curriculo_informacoes::after {
+    content: "";
+    position: absolute;
+
+    top: 20px;
+    bottom: 20px;
+
+    left: 50%;
+
+    border-left: 2px dotted navy;
 }
 
 .curriculo_corpo .curriculo_informacoes div{
@@ -85,20 +102,41 @@ body {
     
 }
 
-.curriculo_corpo .curriculo_informacoes .informacoes p img {
-    width:20px;
-    height: 20px;
-    object-fit: cover;
-    
+.curriculo_corpo .curriculo_informacoes .informacoes p {
+   padding: 5px;
+   
 
+}
+
+
+.curriculo_corpo .curriculo_informacoes .informacoes p img {
+    width: 15px;
+    height: auto;
+
+    object-fit: contain;
+
+    vertical-align: middle;
+
+    margin-right: 5px;
+
+}
+
+.informacoes .redes_profissionais{
+    align-self: center;
+}
+
+.informacoes .redes_profissionais img{
+    width: 15px;
+    height: auto;
+
+    object-fit: contain;
+
+    vertical-align: middle;
+
+    margin-right: 5px;
 }
 
 /*
-.curriculo_corpo .curriculo_informacoes .informacoes {
-   
-    border-right: 2px dotted navy;
-
-}
 
 .curriculo_corpo .curriculo_informacoes .objetivo_profissional{
     text-align: justify;
