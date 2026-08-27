@@ -33,7 +33,6 @@ Curriculo/
 │
 └── img/
     ├── foto.jpeg
-    ├── background.jpg
     ├── location_icon.png
     ├── icons_telefone.png
     ├── icon_email.png
