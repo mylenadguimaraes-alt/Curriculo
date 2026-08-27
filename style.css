@@ -1,4 +1,4 @@
-﻿* {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,24 +14,24 @@ body {
     
     justify-content: center;
     align-items: center;
-    background-image: url("img/background.jpg");
+    background-color: navy;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.curriculo_corpo {
-    border-radius: 10%;
+#curriculo_corpo {
+    border-radius: 8%;
     width: 100%;
-    max-width: 600px;
+    max-width: 630px;
     overflow: hidden;
     background-color: white;
-    border: white 1px solid;
+    border: white 3px solid;
     box-shadow: 10px 10px 50px #000000;
     margin: 45px;
 }
 
-    .curriculo_corpo header {
+    #curriculo_corpo header {
         display: flex;
         gap: 30px;
         align-items: center;
@@ -43,7 +43,7 @@ body {
         justify-content: space-around;
     }
 
-.curriculo_corpo header img{
+#curriculo_corpo header img{
     width:110px;
     height: 110px;
     object-fit: cover;
@@ -51,13 +51,13 @@ body {
     border: white 2px solid;
 
 }
-.curriculo_corpo header .Titulo_subtitulo {
+#curriculo_corpo header #Titulo_subtitulo {
     color: white;
     
 }
 
-    .curriculo_corpo .curriculo_informacoes {
-        padding: 20px;
+    #curriculo_corpo #curriculo_informacoes {
+        padding: 5px;
         text-align: initial;
         display: grid;
         column-gap: 5px;
@@ -66,48 +66,43 @@ body {
         grid-template-rows: auto auto;
     }
 
-.curriculo_corpo .curriculo_informacoes {
+#curriculo_corpo #curriculo_informacoes {
     position: relative;
 }
 
-.curriculo_corpo .curriculo_informacoes::after {
-    content: "";
-    position: absolute;
+    #curriculo_corpo #curriculo_informacoes::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        bottom: 1205px;
+        left: 50%;
+        border-left: 2px dotted navy;
+    }
 
-    top: 20px;
-    bottom: 20px;
-
-    left: 50%;
-
-    border-left: 2px dotted navy;
-}
-
-.curriculo_corpo .curriculo_informacoes div{
+#curriculo_corpo #curriculo_informacoes div{
     padding: 10px;
     
 
 
 }
 
-.curriculo_corpo .curriculo_informacoes h3{
+#curriculo_corpo #curriculo_informacoes h3{
     color: #1e0054;
     border-bottom-style: dotted;
     border-color: navy;
     
 }
 
-.curriculo_corpo .curriculo_informacoes p{
-   
+#curriculo_corpo #curriculo_informacoes p {
     font-size: 15px;
-    
 }
 
-.curriculo_corpo .curriculo_informacoes .informacoes p {
+#curriculo_corpo #curriculo_informacoes #informacoes p {
        padding-top: 15px;
 }
 
 
-.curriculo_corpo .curriculo_informacoes .informacoes p img {
+#curriculo_corpo #curriculo_informacoes #informacoes p img {
     width: 15px;
     height: auto;
 
@@ -119,23 +114,23 @@ body {
 
 }
 
-.curriculo_corpo .curriculo_informacoes .informacoes .email{
+#curriculo_corpo #curriculo_informacoes #informacoes #email{
     padding-bottom: 15px;
 }
 
-.curriculo_corpo .curriculo_informacoes .informacoes .email a{
+#curriculo_corpo #curriculo_informacoes #informacoes #email a{
     color: black;
     font-weight: bolder;
     font-size: 15px;
 }
 
-.informacoes .redes_profissionais {
+#informacoes #redes_profissionais {
     
     display: flex;
     column-gap: 20px;
 }
 
-.informacoes .redes_profissionais img{
+#informacoes #redes_profissionais img{
     
     width: 35px;
     height: auto;
@@ -144,33 +139,127 @@ body {
     transition: 0.2s;
 }
 
-.informacoes .redes_profissionais img:hover{
+#informacoes #redes_profissionais img:hover{
     width: 40px;
 }
 
-.curriculo_corpo .curriculo_informacoes .objetivo_profissional p {
+#curriculo_informacoes #objetivo_profissional p {
     padding: 10px;
-    
+    text-align: justify;
 }
 
-.curriculo_informacoes .cursos ul {
-    padding-left: 20px;
+#habilidades ul {
+    padding: 20px;
+    text-align: initial;
 
 }
 
-.curriculo_informacoes .cursos .curso {
-    list-style: unset;
-    padding-left: 5px;
-    padding-top: 20px;
+.primeiro_elemento{
+    padding-top: 0px;
+}
+
+#habilidades li {
+    padding: 5px;
     font-weight: bold;
 }
 
-.curriculo_informacoes .cursos .local_carga_horaria {
-    list-style: circle;
+#escolaridade dl {
+    padding: 10px;
+    padding-top: 0px;
+}
+
+#escolaridade dt {
+    font-weight: bolder;
+    padding-top: 20px;
+}
+
+#escolaridade dd {
+    padding-left: 15px;
+    padding-top: 10px;
     font-size: small;
-    margin-top: 10px;
-    margin-left: 15px;
+}
+
+#escolaridade dd .conclusao{
+    font-weight: 600;
+    font-size: smaller;
+}
+
+#cursos {
+    grid-column: 1 / 3;
+}
+
+#cursos ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 8px;
+    padding: 20px 20px 10px 25px;
+}
+
+
+#cursos li {
+    padding: 0;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+#projetos {
+    grid-column: 1/3;
+}
+#projetos table{
+    border-collapse:collapse;
+    padding: 20px;
+    display:flex;
+    justify-content: center;
+
+}
+
+#projetos table tr, th, td{
     
+    border: 3px black;
+    border-style: groove;
+    font-family: monospace;
+}
+#projetos table th{
+    padding: 20px;
+    color: white;
+    background-color: #1e0054;
+    font-size: x-large;
+    text-align: center;
+}
+#projetos table td{
+    padding: 5px;
+    text-align: center;
+}
+#projetos table .descricao{
+    text-align: justify;
+}
+#projetos table .link a{
+    color: navy;
+    text-decoration:none;
+}
+.link a:hover {
+    border-bottom: 1px solid;
+}
+.link a:active {
+    font-weight: bold;
+    border-bottom: 1px solid;
+}
+
+#curriculo_informacoes #observacoes_finais{
+    grid-column: 1/3;
+}
+
+#observacoes_finais ul {
+    padding: 20px;
+    padding-bottom: 60px;
+}
+
+#observacoes_finais ul li{
+    padding: 5px;
+    font-weight: bold;
+
 }
 
 
